@@ -127,7 +127,7 @@ export default function App() {
           >
             <div className="md:w-1/3 flex justify-center">
               <Avatar
-                src="https://img.heroui.chat/image/avatar?w=400&h=400&u=santiago"
+                src="images/me_profile.png"
                 className="w-64 h-64 rounded-xl shadow-lg"
                 radius="lg"
               />
@@ -271,15 +271,15 @@ export default function App() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <Icon icon="lucide:mail" width={20} className="text-primary" />
-                        <span>santiago@example.com</span>
+                        <span>santiagomaldonadorojas054@gmail.com</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Icon icon="lucide:map-pin" width={20} className="text-primary" />
-                        <span>San Francisco, CA</span>
+                        <span>Girón Santander</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Icon icon="lucide:phone" width={20} className="text-primary" />
-                        <span>+1 (555) 123-4567</span>
+                        <span>+57 3155470362</span>
                       </div>
                     </div>
                   </div>
@@ -294,10 +294,7 @@ export default function App() {
                         <Icon icon="logos:linkedin-icon" width={24} />
                       </Button>
                       <Button isIconOnly variant="flat" aria-label="Twitter">
-                        <Icon icon="logos:twitter" width={24} />
-                      </Button>
-                      <Button isIconOnly variant="flat" aria-label="Medium">
-                        <Icon icon="logos:medium-icon" width={24} />
+                        <Icon icon="logos:x" width={24} />
                       </Button>
                     </div>
                   </div>
