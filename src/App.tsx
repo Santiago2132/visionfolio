@@ -127,7 +127,7 @@ export default function App() {
           >
             <div className="md:w-1/3 flex justify-center">
               <Avatar
-                src="https://github.com/Santiago2132/visionfolio/blob/8d2cbcafe0d57d081485d5ce609bd4d154bd7d33/images/me_profile.png"
+                src="images/me_profile.png"
                 className="w-64 h-64 rounded-xl shadow-lg"
                 radius="lg"
               />
