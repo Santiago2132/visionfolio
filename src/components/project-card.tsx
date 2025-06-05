@@ -29,10 +29,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <motion.div variants={item}>
-      <Card 
-        isPressable 
-        className="overflow-hidden h-full"
-        shadow="sm"
+      <Card
+      isPressable
+      onPress={() => window.open(project.link, "_blank")}
+      className="overflow-hidden h-full cursor-pointer"
+      shadow="sm"
       >
         <CardBody className="p-0">
           <div className="relative h-48 w-full overflow-hidden">
@@ -59,6 +60,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             color="primary" 
             variant="light" 
             endContent={<Icon icon="lucide:external-link" width={16} />}
+            onClick={() => window.open(project.link, "_blank")}
           >
             View Project
           </Button>

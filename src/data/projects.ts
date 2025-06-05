@@ -60,12 +60,12 @@ export const projects = [
   // Web Projects
   {
     id: 7,
-    title: "PortfolioX",
-    description: "Dynamic portfolio platform for creative professionals to showcase their work.",
-    image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=4",
+    title: "PomoTalk",
+    description: "A sleek web app blending a Pomodoro timer, motivational quotes, and English verb tense guides. Boost productivity with 25-minute focus sessions, inspiring phrases, and clear grammar insights, all in a modern, user-friendly interface  .",
+    image: "https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/d49a6ef2-c148-4989-9fab-2922e6333b56.image.png?v=1749133961899",
     category: "web",
-    tags: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
-    link: "#"
+    tags: ["TypeScript", "React", "Vite","HTML", "CSS"],
+    link: "https://pomotalk.vercel.app/"
   },
   {
     id: 8,
