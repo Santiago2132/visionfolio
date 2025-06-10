@@ -69,12 +69,12 @@ export const projects = [
   },
   {
     id: 8,
-    title: "TaskMaster",
-    description: "Collaborative project management tool with real-time updates and analytics.",
-    image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=5",
+    title: "KeyGen",
+    description: "KeyGen is a sleek, scroll-free web application that allows you to generate secure, memorable passwords that can be customized by length, symbols, and character types.",
+    image: "https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/Captura%20de%20pantalla%202025-06-09%20190202.png?v=1749513758580",
     category: "web",
-    tags: ["JavaScript", "Vue.js", "Firebase", "Chart.js"],
-    link: "#"
+    tags: ["TypeScript", "React", "Vite","HTML", "CSS"],
+    link: "https://keygen-roan.vercel.app/"
   },
   {
     id: 9,
