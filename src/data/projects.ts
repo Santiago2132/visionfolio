@@ -78,11 +78,11 @@ export const projects = [
   },
   {
     id: 9,
-    title: "EduConnect",
-    description: "E-learning platform connecting students with tutors for personalized learning.",
-    image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=6",
+    title: "Habit Tracker",
+    description: "Minimal Habit Tracker is a clean, user-friendly web app to track daily, weekly, or monthly habits. Progress is stored locally, and each habit is uniquely identified by a token based on its name or creation date. Simple, efficient, and fully private.",
+    image: "https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/Captura%20de%20pantalla%202025-06-11%20090329.png?v=1749650619820",
     category: "web",
-    tags: ["TypeScript", "Angular", "Node.js", "MongoDB"],
-    link: "#"
+    tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
+    link: "https://habittracker-beta-orpin.vercel.app/"
   }
 ];
