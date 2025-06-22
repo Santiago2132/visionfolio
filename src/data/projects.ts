@@ -5,7 +5,7 @@ export const projects = [
     title: "FitTrack Pro",
     description: "A fitness tracking app with personalized workout plans and progress analytics.",
     image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=1",
-    category: "mobile",
+    category: "",
     tags: ["Kotlin", "Android", "Firebase", "Material Design"],
     link: "#"
   },
@@ -14,7 +14,7 @@ export const projects = [
     title: "EcoScan",
     description: "Mobile app that identifies eco-friendly products through barcode scanning.",
     image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=2",
-    category: "mobile",
+    category: "",
     tags: ["Kotlin", "Jetpack Compose", "ML Kit", "Room DB"],
     link: "#"
   },
@@ -23,7 +23,7 @@ export const projects = [
     title: "MindfulMoments",
     description: "Meditation and mindfulness app with guided sessions and progress tracking.",
     image: "https://img.heroui.chat/image/dashboard?w=800&h=600&u=3",
-    category: "mobile",
+    category: "",
     tags: ["Kotlin", "ExoPlayer", "Coroutines", "MVVM"],
     link: "#"
   },
@@ -34,7 +34,7 @@ export const projects = [
     title: "SentimentScope",
     description: "NLP tool that analyzes customer feedback for sentiment and key insights.",
     image: "https://img.heroui.chat/image/ai?w=800&h=600&u=1",
-    category: "ai",
+    category: "",
     tags: ["Python", "NLP", "TensorFlow", "Flask"],
     link: "#"
   },
@@ -43,7 +43,7 @@ export const projects = [
     title: "PredictiveHealth",
     description: "ML system that predicts potential health issues based on patient data.",
     image: "https://img.heroui.chat/image/ai?w=800&h=600&u=2",
-    category: "ai",
+    category: "",
     tags: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
     link: "#"
   },
@@ -52,7 +52,7 @@ export const projects = [
     title: "ImageGenius",
     description: "Computer vision application for image classification and object detection.",
     image: "https://img.heroui.chat/image/ai?w=800&h=600&u=3",
-    category: "ai",
+    category: "",
     tags: ["Python", "PyTorch", "OpenCV", "YOLO"],
     link: "#"
   },
