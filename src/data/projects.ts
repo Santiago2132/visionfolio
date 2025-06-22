@@ -1,5 +1,5 @@
 export const projects = [
-  // Mobile Projects
+  // Mobile Projects put mobile
   {
     id: 1,
     title: "FitTrack Pro",
@@ -28,24 +28,24 @@ export const projects = [
     link: "#"
   },
   
-  // AI/ML Projects
+  // AI/ML Projects ai
   {
     id: 4,
-    title: "SentimentScope",
-    description: "NLP tool that analyzes customer feedback for sentiment and key insights.",
-    image: "https://img.heroui.chat/image/ai?w=800&h=600&u=1",
-    category: "",
+    title: "ModelDS",
+    description: "ModelDS is an application that provides a simple web interface and an API endpoint to interact with a language model. It acts as a personal chatbot powered by LLaMA 3.2 with 8 billion parameters.",
+    image: "https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/20250621_2139_Peque%C3%B1o%20Servidor%20Ejecutando%20Llama_simple_compose_01jyar0tsgfmes5ex55qpa0pha.png?v=1750560291969",
+    category: "ai",
     tags: ["Python", "NLP", "TensorFlow", "Flask"],
-    link: "#"
+    link: "https://github.com/Santiago2132/ModelDS.git"
   },
   {
     id: 5,
-    title: "PredictiveHealth",
-    description: "ML system that predicts potential health issues based on patient data.",
-    image: "https://img.heroui.chat/image/ai?w=800&h=600&u=2",
-    category: "",
-    tags: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-    link: "#"
+    title: "MAIz: Freudy Chat",
+    description: "Emotional Chatbot is a conversational AI designed to detect emotions and generate context-aware responses. It includes training scripts for emotion classification and advanced response generation, as well as a Flask-based API for integration into other applications.",
+    image: "https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/20250621_2146_Chatbot%20Freudy%20y%20Rata_simple_compose_01jyare2m3fdbscxpn3qwxrrct.png?v=1750560433538",
+    category: "ai",
+    tags: ["Python", "TensorFlow", "Pandas", "Matplotlib","Random Forest"],
+    link: "https://github.com/Santiago2132/maizback.git"
   },
   {
     id: 6,
