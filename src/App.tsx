@@ -127,7 +127,7 @@ export default function App() {
           >
             <div className="md:w-1/3 flex justify-center">
               <Avatar
-                src="https://cdn.glitch.global/bf813e1f-7084-4504-ad2e-94db114fce8e/me_profile.png?v=1748665257463"
+                src="https://i.ibb.co/1YT2tBg9/me-profile.png"
                 className="w-64 h-64 rounded-xl shadow-lg"
                 radius="lg"
               />
