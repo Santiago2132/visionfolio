@@ -13,21 +13,71 @@ export const AboutSection: React.FC = () => {
         background: "linear-gradient(120deg, #f8f6f0 60%, #f3e9ff 100%)"
       }}
     >
-      {/* Neo-brutalism background blob */}
+      {/* Neo-brutalism animated rounded diamonds */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -top-24 right-0 w-[320px] h-[320px] rounded-[40px] z-0"
+        className="pointer-events-none absolute -top-24 left-16 z-0"
         style={{
-          background: "linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%)",
-          boxShadow: "12px 12px 0 #fbc2eb, 0 0 0 6px #fff"
+          width: "180px",
+          height: "180px",
+          background: "#fad0c4",
+          borderRadius: "40px",
+          boxShadow: "0 0 0 10px #fff, 8px 8px 0 0 #fbc2eb",
+          transform: "rotate(45deg)"
         }}
         animate={{
-          x: [0, -20, 20, 0],
-          y: [0, -10, 10, 0],
-          rotate: [0, -4, 4, 0]
+          x: [0, 30, -30, 0],
+          y: [0, 20, -20, 0],
+          rotate: [45, 51, 39, 45]
         }}
         transition={{
-          duration: 22,
+          duration: 19,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute top-40 right-24 z-0"
+        style={{
+          width: "140px",
+          height: "140px",
+          background: "#e0c3fc",
+          borderRadius: "32px",
+          boxShadow: "0 0 0 8px #fff, 6px 6px 0 0 #a18cd1",
+          transform: "rotate(45deg)"
+        }}
+        animate={{
+          x: [0, -25, 25, 0],
+          y: [0, -15, 15, 0],
+          rotate: [45, 53, 37, 45]
+        }}
+        transition={{
+          duration: 21,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-1/2 z-0"
+        style={{
+          width: "100px",
+          height: "100px",
+          background: "#ffd1ff",
+          borderRadius: "24px",
+          boxShadow: "0 0 0 6px #fff, 4px 4px 0 0 #fbc2eb",
+          transform: "rotate(45deg)"
+        }}
+        animate={{
+          x: [0, -18, 18, 0],
+          y: [0, 8, -8, 0],
+          rotate: [45, 55, 35, 45]
+        }}
+        transition={{
+          duration: 23,
           repeat: Infinity,
           repeatType: "mirror",
           ease: "easeInOut"
@@ -75,7 +125,7 @@ export const AboutSection: React.FC = () => {
               >
                 <Button 
                   color="primary" 
-                  className="border-2 border-black rounded-xl bg-[#f3e9ff] shadow-[4px_4px_0_#a18cd1] hover:scale-105 transition-transform font-bold"
+                  className="border-2 border-black rounded-xl bg-[#7c3aed] text-white shadow-[4px_4px_0_#a18cd1] hover:scale-105 transition-transform font-bold"
                   endContent={<Icon icon="lucide:download" width={18} />}
                 >
                   Download Resume

@@ -11,23 +11,23 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section
       id="projects"
-      className="py-20 px-4 md:px-8 max-w-7xl mx-auto bg-[#f8f6f0] relative overflow-hidden"
+      className="py-20 px-0 md:px-0 w-full bg-[#f8f6f0] relative overflow-hidden"
       style={{
         background: "linear-gradient(120deg, #f8f6f0 60%, #f3e9ff 100%)"
       }}
     >
-      {/* Neo-brutalism background blob */}
+      {/* Neo-brutalism animated circles */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute -top-24 left-0 w-[320px] h-[320px] rounded-[40px] z-0"
+        className="pointer-events-none absolute -top-32 left-0 w-[340px] h-[340px] rounded-full z-0"
         style={{
-          background: "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)",
-          boxShadow: "12px 12px 0 #a18cd1, 0 0 0 6px #fff"
+          background: "radial-gradient(circle at 60% 40%, #e0c3fc 0%, #8ec5fc 100%)",
+          boxShadow: "0 0 0 12px #a18cd1, 0 0 0 24px #fff"
         }}
         animate={{
-          x: [0, 20, -20, 0],
-          y: [0, 10, -10, 0],
-          rotate: [0, 4, -4, 0]
+          x: [0, 40, -40, 0],
+          y: [0, 30, -30, 0],
+          scale: [1, 1.08, 0.95, 1]
         }}
         transition={{
           duration: 18,
@@ -36,7 +36,26 @@ export const ProjectsSection: React.FC = () => {
           ease: "easeInOut"
         }}
       />
-      <div className="relative z-10">
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 right-0 w-[300px] h-[300px] rounded-full z-0"
+        style={{
+          background: "radial-gradient(circle at 40% 60%, #fad0c4 0%, #ffd1ff 100%)",
+          boxShadow: "0 0 0 12px #fbc2eb, 0 0 0 24px #fff"
+        }}
+        animate={{
+          x: [0, -30, 30, 0],
+          y: [0, -20, 20, 0],
+          scale: [1, 1.08, 0.92, 1]
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut"
+        }}
+      />
+      <div className="relative z-10 w-full max-w-none">
         <motion.div 
           initial="hidden"
           whileInView="visible"
