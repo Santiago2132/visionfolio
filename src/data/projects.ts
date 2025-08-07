@@ -83,7 +83,7 @@ export const projects = [
     image: "https://i.ibb.co/9m3KHqXd/Captura-desde-2025-08-07-14-34-51.png",
     category: "web",
     tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
-    link: "https://habittracker-beta-orpin.vercel.app/"
+    link: "https://calculadora-multifuncional.vercel.app/"
   },
   {
     id: 11,
@@ -92,6 +92,6 @@ export const projects = [
     image: "https://i.ibb.co/C535BkJR/Captura-desde-2025-08-07-14-34-39.png",
     category: "web",
     tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
-    link: "https://habittracker-beta-orpin.vercel.app/"
+    link: "https://mi-app-kanban.vercel.app/"
   }
 ];

@@ -64,6 +64,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           >
             View Project
           </Button>
+          {/*
           <Button 
             isIconOnly 
             variant="flat" 
@@ -71,6 +72,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           >
             <Icon icon="lucide:github" width={18} />
           </Button>
+          */}
         </CardFooter>
       </Card>
     </motion.div>
