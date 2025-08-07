@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
           className="mb-6"
         >
           <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            Mobile • AI • Web Developer
+            AI • Web Developer
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             Santiago Maldonado Rojas
@@ -58,9 +58,15 @@ export const HeroSection: React.FC = () => {
           transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 flex gap-8 justify-center flex-wrap"
         >
+          {/* 
           <div className="flex items-center gap-2">
             <Icon icon="logos:kotlin" width={28} />
             <span className="text-foreground-400">Kotlin</span>
+          </div>
+          */}
+          <div className="flex items-center gap-2">
+            <Icon icon="logos:react" width={28} />
+            <span className="text-foreground-400">React</span>
           </div>
           <div className="flex items-center gap-2">
             <Icon icon="logos:python" width={28} />

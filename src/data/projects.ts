@@ -75,5 +75,23 @@ export const projects = [
     category: "web",
     tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
     link: "https://habittracker-beta-orpin.vercel.app/"
+  },
+  {
+    id: 10,
+    title: "Calculadora Multifuncional",
+    description: "A simple and intuitive web calculator that allows users to convert Colombian Pesos into other currencies. It features real-time conversion rates and a user-friendly interface, making currency conversion quick and accessible from any device.",
+    image: "https://i.ibb.co/9m3KHqXd/Captura-desde-2025-08-07-14-34-51.png",
+    category: "web",
+    tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
+    link: "https://habittracker-beta-orpin.vercel.app/"
+  },
+  {
+    id: 11,
+    title: "Tablero Kanban",
+    description: "A lightweight and responsive Kanban board that works entirely in your browser without requiring an account or login. All tasks and boards are saved locally, allowing you to organize your workflow efficiently and privately.",
+    image: "https://i.ibb.co/C535BkJR/Captura-desde-2025-08-07-14-34-39.png",
+    category: "web",
+    tags: ["TypeScript", "TypeScript + SMG", "Node.js", "Vite","React"],
+    link: "https://habittracker-beta-orpin.vercel.app/"
   }
 ];
