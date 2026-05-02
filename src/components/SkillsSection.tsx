@@ -1,60 +1,126 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { SkillCard } from "./skill-card";
+import { Icon } from "@iconify/react";
 import { skills } from "../data/skills";
-import { fadeIn, staggerContainer } from "../animations";
 
 export const SkillsSection: React.FC = () => {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [visibleBars, setVisibleBars] = useState<Set<number>>(new Set());
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const skillElements = entry.target.querySelectorAll(".skill-pill");
+            skillElements.forEach((el, idx) => {
+              setTimeout(() => {
+                setVisibleBars((prev) => new Set(prev).add(idx));
+              }, idx * 100);
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleExpand = (id: number) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
+
   return (
-    <section id="skills" className="py-20 px-4 md:px-8 bg-[#f8f6f0] relative overflow-hidden" style={{
-      background: "linear-gradient(120deg, #f8f6f0 60%, #f3e9ff 100%)"
-    }}>
-      {/* Neo-brutalism background blob */}
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 right-0 w-[320px] h-[320px] rounded-[40px] z-0"
-        style={{
-          background: "linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%)",
-          boxShadow: "12px 12px 0 #fbc2eb, 0 0 0 6px #fff"
-        }}
-        animate={{
-          x: [0, -20, 20, 0],
-          y: [0, -10, 10, 0],
-          rotate: [0, -4, 4, 0]
-        }}
-        transition={{
-          duration: 22,
-          repeat: Infinity,
-          repeatType: "mirror",
-          ease: "easeInOut"
-        }}
-      />
-      <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
-          className="mb-12 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeIn}
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="snap-section"
+      style={{ background: "var(--bg-primary)" }}
+    >
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4">
+        {/* Background decorations */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-10 blur-3xl"
+          style={{ background: "var(--accent-secondary)" }}
+          animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.15, 0.1] }}
+          transition={{ duration: 15, repeat: Infinity, repeatType: "mirror" }}
+        />
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-20 -left-20 w-72 h-72 rounded-full opacity-10 blur-3xl"
+          style={{ background: "var(--accent-primary)" }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+          transition={{ duration: 18, repeat: Infinity, repeatType: "mirror" }}
+        />
+
+        {/* Section header */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight text-black drop-shadow-[4px_4px_0_#fff]">
-            Technical Skills
-          </h2>
-          <p className="text-foreground-500 max-w-2xl mx-auto text-lg font-medium">
+          <h2 className="section-title gradient-text">Technical Skills</h2>
+          <p className="section-subtitle">
             Technologies and tools I've mastered throughout my career
           </p>
         </motion.div>
-        <motion.div 
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {skills.map((skill) => (
-            <SkillCard key={skill.id} skill={skill} />
+
+        {/* Skills grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skills.map((skill, idx) => (
+            <motion.button
+              key={skill.id}
+              className={`skill-pill ${expandedId === skill.id ? "expanded" : ""}`}
+              onClick={() => toggleExpand(skill.id)}
+              initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {/* Icon */}
+              <div className="skill-pill-icon">
+                <Icon icon={skill.icon} width={24} color="white" />
+              </div>
+
+              {/* Details */}
+              <div className="skill-pill-details">
+                <div className="skill-pill-name">{skill.name}</div>
+                <div className="skill-pill-proficiency">
+                  {skill.proficiency}% proficiency
+                </div>
+                <div className="skill-pill-bar">
+                  <div
+                    className="skill-pill-bar-fill"
+                    style={{ width: visibleBars.has(idx) ? `${skill.proficiency}%` : "0%" }}
+                  />
+                </div>
+
+                {/* Expanded description */}
+                <div className="skill-pill-expanded">
+                  <p className="skill-pill-description">{skill.description}</p>
+                </div>
+              </div>
+
+              {/* Expand indicator */}
+              <Icon
+                icon={expandedId === skill.id ? "lucide:chevron-up" : "lucide:chevron-down"}
+                width={20}
+                style={{ color: "var(--text-muted)", flexShrink: 0, transition: "var(--transition-smooth)" }}
+              />
+            </motion.button>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
