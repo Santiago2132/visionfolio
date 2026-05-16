@@ -19,7 +19,7 @@ const CATEGORIES: { key: Category; label: string; icon: string }[] = [
   { key: "all", label: "All", icon: "lucide:grid" },
   { key: "web", label: "Web", icon: "lucide:globe" },
   { key: "ai", label: "AI & ML", icon: "lucide:brain" },
-  { key: "mobile", label: "Mobile", icon: "lucide:smartphone" },
+  // { key: "mobile", label: "Mobile", icon: "lucide:smartphone" },
 ];
 
 export const ProjectsSection: React.FC = () => {

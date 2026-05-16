@@ -26,18 +26,18 @@ const ContactItem: React.FC<ContactItemProps> = ({ icon, label, value, href, del
     <div className="contact-icon">
       <Icon icon={icon} width={24} />
     </div>
-    <div>
+    <div style={{ minWidth: 0 }}>
       <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.25rem" }}>
         {label}
       </div>
-      <div style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--text-primary)" }}>{value}</div>
+      <div style={{ fontWeight: 600, fontSize: "0.95rem", color: "var(--text-primary)", overflowWrap: "anywhere", wordBreak: "break-word" }}>{value}</div>
     </div>
   </motion.a>
 );
 
 export const ContactSection: React.FC = () => {
   const socialLinks = [
-    { icon: "logos:github-icon", label: "GitHub", href: "https://github.com/Santiago2132" },
+    { icon: "lucide:github", label: "GitHub", href: "https://github.com/Santiago2132" },
     {
       icon: "logos:linkedin-icon",
       label: "LinkedIn",
@@ -104,8 +104,8 @@ export const ContactSection: React.FC = () => {
             <ContactItem
               icon="lucide:mail"
               label="Email"
-              value="santiagomaldonadorojas054@gmail.com"
-              href="mailto:santiagomaldonadorojas054@gmail.com"
+              value="santiagomaldonadorojas054@protonmail.com"
+              href="mailto:santiagomaldonadorojas054@protonmail.com"
               delay={0.1}
             />
             <ContactItem

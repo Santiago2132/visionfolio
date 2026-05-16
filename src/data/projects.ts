@@ -1,5 +1,6 @@
 export const projects = [
   // Mobile Projects put mobile
+  /*
   {
     id: 1,
     title: "FitTrack Pro",
@@ -27,6 +28,7 @@ export const projects = [
     tags: ["Kotlin", "ExoPlayer", "Coroutines", "MVVM"],
     link: "#"
   },
+  */
   
   // AI/ML Projects ai
   {
